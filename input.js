@@ -25,6 +25,7 @@ const handleUserInput = function(data) {
   if (data === '\u0003') {
     process.exit();
   }
+
   if (data === 'w') {
     connection.write("Move: up");
   }
@@ -37,6 +38,17 @@ const handleUserInput = function(data) {
   if (data === 'd') {
     connection.write("Move: right");
   }
+
+  if (data === '1') {
+    connection.write("Say: I am a WINNER!");
+  }
+  if (data === '2') {
+    connection.write("Say: L O S E R!");
+  }
+  if (data === '3') {
+    connection.write("Say: Good Game!");
+  }
+
 };
 
 
